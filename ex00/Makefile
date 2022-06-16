@@ -27,6 +27,9 @@ debug: fclean
 debug: CFLAGS := $(CFLAGS) -g
 debug: all
 
+leaks: $(NAME)
+	leaks --atExit -- ./$(NAME)
+
 $(NAME): $(OBJS) $(SRCS) $(HEADERS)
 	$(CC) $(CFLAGS) $(OBJS) -o $@
 
@@ -36,4 +39,4 @@ $(OBJDIR)/%.o: %.cpp | $(OBJDIR)
 $(OBJDIR):
 	mkdir $(OBJDIR)
 
-.PHONY: all clean fclean re show debug
+.PHONY: all clean fclean re show debug leaks
