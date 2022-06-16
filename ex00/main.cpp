@@ -24,13 +24,14 @@ int	main(void) {
 	anotherTown(heapZombie);
 	delete heapZombie;
 	anotherTown(&stackZombie);
+	return 0;
 }
 
 void	anotherTown(Zombie* visitor) {
 	std::cout << "Going to another town" << std::endl;
 	visitor->announce();
-	visitor->setName("Visitor");
-	visitor->announce();
+	// visitor->setName("Visitor");
+	// visitor->announce();
 
 	Zombie	local = Zombie("Olaf");
 

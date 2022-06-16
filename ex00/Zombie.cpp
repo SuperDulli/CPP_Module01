@@ -2,11 +2,11 @@
 #include "Zombie.hpp"
 
 Zombie::Zombie(void) {
-	std::cout << "Default Zombie Constructor called" << std::endl;
+	// std::cout << "Default Zombie Constructor called" << std::endl;
 }
 
 Zombie::Zombie(std::string name): m_name(name) {
-	std::cout << "Zombie Constructor called" << std::endl;
+	// std::cout << "Zombie Constructor called" << std::endl;
 }
 
 Zombie::~Zombie(void) {
