@@ -4,7 +4,7 @@ CFLAGS	= -Wall -Wextra -Werror -std=c++98
 NAME	= moar_brainz
 CLASSES	= Zombie.cpp
 HEADERS	= $(patsubst %.cpp,%.hpp,$(CLASSES))
-SRCS	= main.cpp $(CLASSES) zombieHorde.cpp
+SRCS	= main.cpp $(CLASSES) ZombieHorde.cpp
 OBJDIR	= obj
 OBJS	= $(patsubst %.cpp,$(OBJDIR)/%.o,$(SRCS))
 
