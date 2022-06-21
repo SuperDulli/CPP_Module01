@@ -18,13 +18,13 @@ int	main(int argc, char* argv[]) {
 	s1 = argv[2];
 	s2 = argv[3];
 
-	inputFileStream.open(fileName, std::ifstream::in);
+	inputFileStream.open(fileName.c_str(), std::ifstream::in);
 	if (inputFileStream.fail()) {
 		std::cerr << "failed to open " << fileName << " for reading" << std::endl;
 		return 1;
 	}
 	std::string const	fileNameOutput = fileName += ".replace";
-	outputFileStream.open(fileNameOutput, std::ofstream::out);
+	outputFileStream.open(fileNameOutput.c_str(), std::ofstream::out);
 	if (outputFileStream.fail()) {
 		std::cerr << "failed to open " << fileNameOutput << " for writing" << std::endl;
 		return 1;
